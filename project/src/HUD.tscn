@@ -1,7 +1,35 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://src/HUD.gd" type="Script" id=1]
 [ext_resource path="res://assets/Xolonium-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="GDScript" id=4]
+script/source = "extends CanvasLayer
+
+signal start_game
+
+func show_message(text):
+	$Title.text = text
+	$Title.show()
+	$MessageTimer.start()
+
+func show_game_over():
+	show_message(\"Game Over\")
+	yield($MessageTimer, \"timeout\")
+	$Message.text = \"Rich Aliens\"
+	$Message.show()
+	yield(get_tree().create_timer(1), \"timeout\")
+	$StartButton.show()
+
+func update_score(score):
+	$ScoreLabel.text = str(score)
+
+func _on_StartButton_pressed():
+	$StartButton.hide()
+	emit_signal(\"start_game\")
+
+func _on_MessageTimer_timeout():
+	$Message.hide()
+"
 
 [sub_resource type="DynamicFont" id=1]
 size = 27
@@ -16,10 +44,9 @@ size = 35
 font_data = ExtResource( 2 )
 
 [node name="HUD" type="CanvasLayer"]
-script = ExtResource( 1 )
+script = SubResource( 4 )
 
 [node name="ScoreLabel" type="Label" parent="."]
-visible = false
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -117.773
@@ -34,6 +61,7 @@ __meta__ = {
 }
 
 [node name="Title" type="Label" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -52,6 +80,7 @@ __meta__ = {
 }
 
 [node name="StartButton" type="Button" parent="."]
+visible = false
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
