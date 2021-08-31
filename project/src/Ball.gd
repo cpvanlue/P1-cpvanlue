@@ -12,6 +12,8 @@ func _process(delta):
 	if Input.is_action_pressed("ui_down"):
 		angle += 1
 	if Input.is_action_just_pressed("launch"):
+		$laser.visible = false
+		$particle_3.visible = false
 		if launchValue == 0:
 			impulse = Vector2.RIGHT.rotated(deg2rad(angle)) * 250
 			apply_impulse(Vector2.ZERO, impulse)
