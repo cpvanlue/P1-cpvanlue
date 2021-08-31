@@ -28,5 +28,5 @@ rotation = 1.57378
 texture = ExtResource( 3 )
 
 [node name="particle_3" type="Sprite" parent="."]
-position = Vector2( 213.817, -0.616791 )
+position = Vector2( 231.817, -1.61679 )
 texture = ExtResource( 4 )
