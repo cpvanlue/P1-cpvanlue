@@ -2,7 +2,7 @@
 
 [ext_resource path="res://assets/Xolonium-Regular.ttf" type="DynamicFontData" id=2]
 
-[sub_resource type="GDScript" id=4]
+[sub_resource type="GDScript" id=5]
 script/source = "extends CanvasLayer
 
 signal start_game
@@ -29,22 +29,24 @@ func _on_StartButton_pressed():
 
 func _on_MessageTimer_timeout():
 	$Message.hide()
+
+
 "
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=6]
 size = 27
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=7]
 size = 56
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 size = 35
 font_data = ExtResource( 2 )
 
 [node name="HUD" type="CanvasLayer"]
-script = SubResource( 4 )
+script = SubResource( 5 )
 
 [node name="ScoreLabel" type="Label" parent="."]
 anchor_left = 1.0
@@ -53,7 +55,7 @@ margin_left = -117.773
 margin_top = 17.0
 margin_right = -22.7726
 margin_bottom = 51.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 6 )
 text = "0"
 align = 2
 __meta__ = {
@@ -72,7 +74,7 @@ margin_right = 167.5
 margin_bottom = -19.3628
 size_flags_vertical = 1
 size_flags_stretch_ratio = 0.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 7 )
 text = "Rich Aliens"
 align = 1
 __meta__ = {
@@ -89,13 +91,10 @@ margin_left = -71.0
 margin_top = -200.0
 margin_right = 71.0
 margin_bottom = -145.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "Play"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MessageTimer" type="Timer" parent="."]
-
-[connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
-[connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]
