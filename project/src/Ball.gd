@@ -18,6 +18,7 @@ func _process(delta):
 	if Input.is_action_pressed("ui_right"):
 		strength += 30
 	if Input.is_action_just_pressed("launch"):
+		mode = RigidBody2D.MODE_RIGID
 		$Laser.visible = false
 		$Crosshair.visible = false
 		$PowerBar.visible = false
