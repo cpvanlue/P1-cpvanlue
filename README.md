@@ -27,6 +27,8 @@ This iteration really helped me understand how Godot Game Engine is object-orien
 - [X] A-2: There is a visual indicator showing the angle at which the projectile will fire.
 - [X] A-3: The projectile's hitting the target is recognized and logged to the console or otherwise indicated.
 
+I believe that I properly deserve an A on this submission.
+
 ## Third-Party Assets
 
 Images are from "Physics Assets" and "Rolling Ball Assets". Created in 2016 by kenney.nl,
