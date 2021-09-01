@@ -87,7 +87,8 @@ points = PoolVector2Array( 72, 69, 3, 69, 0, 0, 72, 0 )
 script = ExtResource( 6 )
 
 [node name="colored_land" type="Sprite" parent="."]
-position = Vector2( 515.931, 291.59 )
+position = Vector2( 512.567, 291.59 )
+scale = Vector2( 1.00657, 1 )
 texture = ExtResource( 5 )
 
 [node name="Ball" parent="." instance=ExtResource( 1 )]
