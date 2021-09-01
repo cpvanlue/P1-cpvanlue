@@ -1,7 +1,8 @@
 extends Node2D
 
+var score = 0
 
 func _on_Coin_body_entered(body):
 	$Coin.visible = false
-	var score = int($HUD/ScoreLabel.text) + 10
-	$HUD.update_score(score)
+	score += 10
+	$HUD/ScoreLabel.text = str(score)
