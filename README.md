@@ -2,7 +2,7 @@
 A project by Caleb Van Lue.
 
 ## How to Play
-The objective of this simple iteration is to use the alien to collect the coin on screen. In order to do that, you must aim the alien to the proper angle and use the appropriate strength to project toward the coin. To increase/decrease the Power bar, use the Left and Right arrow keys. To increase/decrease the angle at which you are aiming, use the Up and Down arrow keys. Once you are ready to launch, press the Spacebar to send your alien flying toward the coin! Score is incremented by 10 points for each coin collected.
+The objective of this simple iteration is to use the alien to collide with the coin on screen. In order to do that, you must aim the alien to the proper angle and use the appropriate strength to project toward the coin. To increase/decrease the Power bar, use the Left and Right arrow keys. To increase/decrease the angle at which you are aiming, use the Up and Down arrow keys. Once you are ready to launch, press the Spacebar to send your alien flying toward the coin! Score is incremented by 10 points for each coin collision.
 
 ## Project Report
 
