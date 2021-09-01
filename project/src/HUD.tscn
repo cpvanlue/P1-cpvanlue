@@ -1,37 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/Xolonium-Regular.ttf" type="DynamicFontData" id=2]
-
-[sub_resource type="GDScript" id=5]
-script/source = "extends CanvasLayer
-
-signal start_game
-
-func show_message(text):
-	$Title.text = text
-	$Title.show()
-	$MessageTimer.start()
-
-func show_game_over():
-	show_message(\"Game Over\")
-	yield($MessageTimer, \"timeout\")
-	$Message.text = \"Rich Aliens\"
-	$Message.show()
-	yield(get_tree().create_timer(1), \"timeout\")
-	$StartButton.show()
-
-func update_score(score):
-	$ScoreLabel.text = str(score)
-
-func _on_StartButton_pressed():
-	$StartButton.hide()
-	emit_signal(\"start_game\")
-
-func _on_MessageTimer_timeout():
-	$Message.hide()
-
-
-"
 
 [sub_resource type="DynamicFont" id=6]
 size = 27
@@ -46,7 +15,6 @@ size = 35
 font_data = ExtResource( 2 )
 
 [node name="HUD" type="CanvasLayer"]
-script = SubResource( 5 )
 
 [node name="ScoreLabel" type="Label" parent="."]
 anchor_left = 1.0
