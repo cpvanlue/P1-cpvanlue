@@ -2,15 +2,15 @@
 
 [ext_resource path="res://assets/Xolonium-Regular.ttf" type="DynamicFontData" id=2]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=1]
 size = 27
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=2]
 size = 56
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 35
 font_data = ExtResource( 2 )
 
@@ -23,7 +23,7 @@ margin_left = -117.773
 margin_top = 17.0
 margin_right = -22.7726
 margin_bottom = 51.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 1 )
 text = "0"
 align = 2
 __meta__ = {
@@ -42,7 +42,7 @@ margin_right = 167.5
 margin_bottom = -19.3628
 size_flags_vertical = 1
 size_flags_stretch_ratio = 0.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 2 )
 text = "Rich Aliens"
 align = 1
 __meta__ = {
@@ -59,7 +59,7 @@ margin_left = -71.0
 margin_top = -200.0
 margin_right = 71.0
 margin_bottom = -145.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 text = "Play"
 __meta__ = {
 "_edit_use_anchors_": false

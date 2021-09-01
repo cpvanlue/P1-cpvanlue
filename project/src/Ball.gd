@@ -4,7 +4,7 @@ var angle = -45
 var strength = 250
 var launchValue = 0
 
-func _process(delta):
+func _process(_delta):
 	$PowerBar.value = strength
 	strength = clamp(strength, 50, 700)
 	angle = clamp(angle, -90, 0)
