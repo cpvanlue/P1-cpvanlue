@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Ball.gd" type="Script" id=1]
 [ext_resource path="res://assets/happyfunball.png" type="Texture" id=2]
@@ -7,6 +7,9 @@
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 36.0
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.164706, 0.403922, 0.941176, 1 )
 
 [node name="Ball" type="RigidBody2D"]
 script = ExtResource( 1 )
@@ -22,11 +25,27 @@ shape = SubResource( 1 )
 position = Vector2( -0.110229, 0 )
 texture = ExtResource( 2 )
 
-[node name="laser" type="Sprite" parent="."]
+[node name="Laser" type="Sprite" parent="."]
 position = Vector2( 125.623, -1.24675 )
 rotation = 1.57378
 texture = ExtResource( 3 )
 
-[node name="particle_3" type="Sprite" parent="."]
+[node name="Crosshair" type="Sprite" parent="."]
 position = Vector2( 231.817, -1.61679 )
 texture = ExtResource( 4 )
+
+[node name="PowerBar" type="ProgressBar" parent="."]
+margin_left = 66.8312
+margin_top = -8.13982
+margin_right = 184.831
+margin_bottom = 5.86018
+custom_styles/fg = SubResource( 2 )
+min_value = 50.0
+max_value = 700.0
+step = 30.0
+value = 50.0
+rounded = true
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
