@@ -3,20 +3,22 @@ extends RigidBody2D
 var angle = -45
 var strength = 250
 var launchValue = 0
+export var degrees_per_second = 50
+export var strength_factor = 30
 
-func _process(_delta):
+func _process(delta):
 	$PowerBar.value = strength
 	strength = clamp(strength, 50, 700)
 	angle = clamp(angle, -90, 0)
 	self.rotation_degrees = angle
-	if Input.is_action_pressed("ui_up"):
-		angle -= 1
-	if Input.is_action_pressed("ui_down"):
-		angle += 1
-	if Input.is_action_pressed("ui_left"):
-		strength -= 30
-	if Input.is_action_pressed("ui_right"):
-		strength += 30
+	if Input.is_action_pressed("increase_angle"):
+		angle -= degrees_per_second * delta
+	if Input.is_action_pressed("decrease_angle"):
+		angle += degrees_per_second * delta
+	if Input.is_action_pressed("decrease_strength"):
+		strength -= strength_factor
+	if Input.is_action_pressed("increase_strength"):
+		strength += strength_factor
 	if Input.is_action_just_pressed("launch"):
 		mode = RigidBody2D.MODE_RIGID
 		$Laser.visible = false
