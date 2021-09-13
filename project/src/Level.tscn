@@ -1,6 +1,5 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://src/Ball.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/woodblock.png" type="Texture" id=2]
 [ext_resource path="res://assets/dirt.png" type="Texture" id=3]
 [ext_resource path="res://assets/grass.png" type="Texture" id=4]
@@ -91,10 +90,6 @@ position = Vector2( 512.567, 291.59 )
 scale = Vector2( 1.00657, 1 )
 texture = ExtResource( 5 )
 
-[node name="Ball" parent="." instance=ExtResource( 1 )]
-position = Vector2( 100, 470 )
-contacts_reported = 1
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 4 )
 format = 1
@@ -105,5 +100,11 @@ position = Vector2( 816.983, 363.735 )
 
 [node name="HUD" parent="." instance=ExtResource( 8 )]
 
-[connection signal="body_entered" from="Ball" to="." method="_on_Ball_body_entered"]
+[node name="KillZone" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KillZone"]
+polygon = PoolVector2Array( 1039.96, -19.1265, 1039.96, 678.818, 1177.86, 678.818, 1179.54, -135.17, -248.297, -128.443, -248.297, 685.545, -26.3006, 682.181, -34.7096, -34.2626 )
+
 [connection signal="body_entered" from="Coin" to="." method="_on_Coin_body_entered"]
+[connection signal="sleeping_state_changed" from="Coin" to="." method="_on_Coin_sleeping_state_changed"]
+[connection signal="body_entered" from="KillZone" to="." method="_on_KillZone_body_entered"]
