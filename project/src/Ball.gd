@@ -27,4 +27,5 @@ func _process(delta):
 		if launchValue == 0:
 			var impulse = Vector2.RIGHT.rotated(deg2rad(angle)) * strength
 			apply_impulse(Vector2.ZERO, impulse)
+			$LaunchSound.play()
 			launchValue = 1
