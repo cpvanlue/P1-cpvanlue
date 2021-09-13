@@ -1,4 +1,4 @@
-# Project 1, Iteration 1: Rich Aliens
+# Project 1, Iteration 2: Rich Aliens
 A project by Caleb Van Lue.
 
 ## How to Play
