@@ -39,4 +39,6 @@ func _on_Ball_sleeping_state_changed():
 	destroy_ball()
 	
 func game_over():
-	var _ignored = get_tree().change_scene("res://src/MainMenu.tscn")
+	var gameOver = load("res://src/GameOver.tscn").instance()
+	gameOver.get_node("ScoreLabel").text = "Score: %d" % score
+	call_deferred("add_child", gameOver)
