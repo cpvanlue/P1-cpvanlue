@@ -29,9 +29,14 @@ func destroy_ball():
 	$HUD/ProjectilesRemaining.text = "Projectiles Remaining: %d" % remaining_projectiles
 	if remaining_projectiles > 0:
 		create_ball()
+	else:
+		game_over()
 
 func _on_KillZone_body_entered(_body: RigidBody2D):
 	destroy_ball()
 
 func _on_Ball_sleeping_state_changed():
 	destroy_ball()
+	
+func game_over():
+	get_tree().change_scene("res://src/MainMenu.tscn")
