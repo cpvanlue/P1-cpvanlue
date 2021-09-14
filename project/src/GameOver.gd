@@ -1,3 +1,5 @@
+## Scene used to navigate from game over to main menu.
+
 extends Node2D
 
 func _on_Button_pressed():

@@ -1,3 +1,9 @@
+## The main gameplay scene
+##
+## Handles creation and deletion of the projectiles,
+## as well as collisions with the targets. Gameplay score
+## and inventory is also controlled here. 
+
 extends Node2D
 
 var score = 0

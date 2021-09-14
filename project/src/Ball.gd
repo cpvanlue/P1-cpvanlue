@@ -1,3 +1,6 @@
+## Scene used to represent the projectile as well as
+## manage its angle and impulse.
+
 extends RigidBody2D
 
 var angle = -45
