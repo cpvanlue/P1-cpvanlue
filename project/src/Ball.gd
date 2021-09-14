@@ -1,6 +1,5 @@
 extends RigidBody2D
 
-var projectileName = "Ball"
 var angle = -45
 var strength = 250
 var launchValue = 0
@@ -30,4 +29,3 @@ func _process(delta):
 			apply_impulse(Vector2.ZERO, impulse)
 			$LaunchSound.play()
 			launchValue = 1
-			return
