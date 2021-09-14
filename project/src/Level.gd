@@ -39,4 +39,4 @@ func _on_Ball_sleeping_state_changed():
 	destroy_ball()
 	
 func game_over():
-	get_tree().change_scene("res://src/MainMenu.tscn")
+	var _ignored = get_tree().change_scene("res://src/MainMenu.tscn")
