@@ -6,6 +6,7 @@ var remaining_projectiles = 3
 
 func _ready():
 	create_ball()
+	$HUD/ProjectilesRemaining.text = "Projectiles Remaining: %d" % remaining_projectiles
 	
 func create_ball():
 	ball = load("res://src/Ball.tscn").instance()
@@ -19,13 +20,15 @@ func _on_Ball_body_entered(body):
 		$HUD/ScoreLabel.text = str(score)
 		print("Coin get!")
 
+func destroy_ball():
+	ball.call_deferred("free")
+	remaining_projectiles -= 1
+	$HUD/ProjectilesRemaining.text = "Projectiles Remaining: %d" % remaining_projectiles
+	if remaining_projectiles > 0:
+		create_ball()
+
 func _on_KillZone_body_entered(body: RigidBody2D):
-	if body.projectileName == "Ball":
-		body.queue_free()
-		remaining_projectiles -= 1
-		print(remaining_projectiles)
-		if remaining_projectiles > 0:
-			create_ball()
+	destroy_ball()
 
 func _on_Ball_sleeping_state_changed():
 	$Ball.queue_free()
