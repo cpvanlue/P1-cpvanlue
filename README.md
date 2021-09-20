@@ -1,4 +1,4 @@
-# Project 1, Iteration 2: Rich Aliens
+# Project 1, Iteration 3: Rich Aliens
 A project by Caleb Van Lue.
 
 ## How to Play
@@ -6,7 +6,7 @@ The objective of this iteration is to use the alien to collide with the coins on
 
 ## Project Report
 
-This iteration truly tested my understanding of signals in Godot. I spent quite some time working with signals on the Ball and Coin objects, trying to figure out what would work and what wouldn't. There was quite a bit of frustration, but that always leads to exciting breakthroughs. I also refactored some of my code from the previous iteration to rely more on code rather than the Node graphical interface. Things like the creation of new projectiles are made much easier in my mind when solely relying on the code. Overall, I'm proud of the progress I made this iteration and I think this project is well set up for the next one.
+I feel that this iteration of the project really allowed my mind to click when it comes to Godot engine. By this point, I've figured out the process that works best for me when creating software in a project like this, but that was something that I struggled with while trying to learn Godot. Trying to design a new software concept while working in a new programming environment was a bit overwhelming in the first few weeks of the course, but once I've gotten the hang of it, I feel quite comfortable working with this engine. I believe that versatility and flexibility is important when it comes to software engineering, and so far, this course has helped improve those skills for me.
 
 - [X] D-1: The repository link is submitted to Canvas before the project deadline.
 - [X] D-2: The repository contains a <code>README.md</code> file in its top-level directory.
@@ -16,14 +16,15 @@ This iteration truly tested my understanding of signals in Godot. I spent quite 
 - [X] C-3: You have a clear legal right to use all incorporated assets, and the licenses for all third-party assets are tracked in the <code>README.md</code> file.
 - [X] C-4: The <code>README.md</code> contains instructions for how to play the game or such instructions are incorporated into the game itself.
 - [X] C-5: The project content is eligible for an <a href="https://www.esrb.org/ratings-guide/">ESRB Rating</a> of T or less.
-- [X] C-6: The projectile and targets are shown with 2D graphics.
-- [X] C-7: The game plays an appropriate sound effect when the projectile is fired.
+- [X] C-6: The game starts on a title screen. Interacting with the title screen moves the player into the gameplay screen.
 - [X] B-1: The <code>README.md</code> file contains a personal reflection on the iteration and self-evaluation, as defined above.
 - [X] B-2: Earn one star.
-- [X] A-1: Earn three stars.
-- [X] ⭐ The player has a small inventory of projectiles, and only one can be launched at a time.
-- [X] ⭐ The background and ground use 2D graphics.
-- [X] ⭐ A <abbr title="Heads-Up Display">HUD</abbr> shows the current game state such as the score and number of projectiles remaining.
+- [X] A-1: Generate neither warnings nor errors at runtime.
+- [X] A-2: Earn three stars.
+- [X] ⭐ When the game is over, the player can interact to take the game back to the title screen, from which the game can be played again.
+- [X] ⭐ Use an <code>AnimationPlayer</code> or <code>Tween</code> to add some pop to the user-interface.
+- [X] ⭐ The source code complies with our adopted style guide.
+
 
 I've earned an A on this submission.
 
