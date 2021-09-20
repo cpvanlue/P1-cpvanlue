@@ -21,7 +21,11 @@ func create_ball():
 	ball.contacts_reported = 1
 	ball.connect("body_entered", self, "_on_Ball_body_entered")
 	ball.connect("sleeping_state_changed", self, "_on_Ball_sleeping_state_changed")
+	ball.connect("launch", self, "_on_Ball_launched")
 	call_deferred("add_child", ball)
+	
+func _on_Ball_launched():
+	$LaunchSound.play()
 
 func _on_Ball_body_entered(body):
 	if body == $Coin or body == $Coin2 or body == $Coin3:
